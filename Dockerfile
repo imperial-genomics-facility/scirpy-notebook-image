@@ -18,7 +18,10 @@ RUN chown ${NB_UID} /home/$NB_USER/environment.yml && \
     chown ${NB_UID} /home/$NB_USER/Dockerfile && \
     chown -R ${NB_UID} /home/$NB_USER/examples
 USER $NB_USER
-RUN conda update -n base -c defaults conda && \
+WORKDIR /home/$NB_USER
+ENV TMPDIR=/home/$NB_USER/.tmp
+RUN mkdir -p ${TMPDIR} && \
+    conda update -n base -c defaults conda && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
     conda clean -a -y && \
     rm -rf /home/$NB_USER/.cache && \
