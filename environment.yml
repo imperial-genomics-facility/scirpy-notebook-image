@@ -1,0 +1,6 @@
+channels:
+ - conda-forge
+dependencies:
+- pip
+ - pip:
+   - scirpy==0.5.0
