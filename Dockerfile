@@ -21,7 +21,6 @@ USER $NB_USER
 WORKDIR /home/$NB_USER
 ENV TMPDIR=/home/$NB_USER/.tmp
 RUN mkdir -p ${TMPDIR} && \
-    conda update -n base -c defaults conda && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
     conda clean -a -y && \
     rm -rf /home/$NB_USER/.cache && \
