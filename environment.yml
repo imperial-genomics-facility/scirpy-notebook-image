@@ -1,7 +1,6 @@
 channels:
  - conda-forge
 dependencies:
-- r-cairo
 - pip
 - pip:
   - scirpy==0.5.0
