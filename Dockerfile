@@ -20,6 +20,7 @@ RUN chown ${NB_UID} /home/$NB_USER/environment.yml && \
 USER $NB_USER
 WORKDIR /home/$NB_USER
 ENV TMPDIR=/home/$NB_USER/.tmp
+ENV NUMBA_CACHE_DIR=/tmp
 RUN mkdir -p ${TMPDIR} && \
     conda update -n base -c defaults conda && \
     conda env update -q -n notebook-env --file /home/$NB_USER/environment.yml && \
