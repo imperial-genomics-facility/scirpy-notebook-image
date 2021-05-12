@@ -3,4 +3,4 @@ channels:
 dependencies:
 - pip
 - pip:
-  - scirpy==0.5.0
+  - scirpy==0.7.0
