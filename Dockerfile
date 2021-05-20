@@ -1,6 +1,6 @@
-FROM imperialgenomicsfacility/scanpy-notebook-image:latest
+FROM imperialgenomicsfacility/scanpy-notebook-image:release-v0.0.4
 LABEL maintainer="imperialgenomicsfacility"
-LABEL version="0.0.1"
+LABEL version="0.0.2"
 LABEL description="Docker image for running Scirpy based single cell analysis"
 ENV NB_USER vmuser
 ENV NB_UID 1000
